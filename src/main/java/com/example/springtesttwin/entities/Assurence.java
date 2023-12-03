@@ -16,7 +16,7 @@ public class Assurence {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
   Integer  idAssurence;
     String designation ;
-    Double montant;
+    float montant;
     @ManyToOne(cascade = CascadeType.ALL)
     Contrat contrat;
 
