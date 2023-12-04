@@ -19,10 +19,15 @@ public class ContratController {
 
     final ContratBenificiareService contratBenificiareService;
 
+     private final iBeneficiaireReository beneficiaireReository;
+
     @PostMapping("/ajouter")
     public Contrat ajouterContrat(@RequestBody Contrat contrat) {
         return contratBenificiareService.ajouterContrat(contrat);
     }
 
-
+ @GetMapping("/oldest/{idBenef}")
+    public Contrat getOldestContrat(@PathVariable Integer idBenef) {
+        return beneficiaireRepository.getOldestContratForBeneficiaire(idBenef);
+    }
 }
