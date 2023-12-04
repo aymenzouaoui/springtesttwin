@@ -24,4 +24,10 @@ public class BeneficiaireeService implements iBeneficiaire {
     public Set<Beneficiaire> getBeneficairesByType(TypeContrat typeContrat) {
         return beneficiaireReository.getBeneficiairesByType(typeContrat);
     }
+
+
+     @Override
+    public Set<Beneficiaire> getBeneficairesByType(TypeContrat typeContrat) {
+        return beneficiaireReository.getBeneficiairesByType(typeContrat);
+    }
 }
