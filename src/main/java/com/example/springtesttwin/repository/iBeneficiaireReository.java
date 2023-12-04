@@ -15,4 +15,13 @@ Beneficiaire findByCin(Integer  cin);
 
     @Query("SELECT b FROM Beneficiaire b JOIN b.assurences a JOIN a.contrat c WHERE c.type = :type")
     Set<Beneficiaire> getBeneficiairesByType(@Param("type") TypeContrat type);
+
+
+    @Query("SELECT c FROM Beneficiaire b " +
+            "JOIN b.assurences a " +
+            "JOIN a.contrat c " +
+            "WHERE b.idBenef = :idBf " +
+            "ORDER BY c.dateEffet ASC")
+    Contrat getOldestContratForBeneficiaire(@Param("idBf") Integer idBf);
+
 }
