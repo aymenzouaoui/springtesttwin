@@ -9,4 +9,7 @@ public interface iBeneficiaire {
     Beneficiaire ajouterBeneficiaire (Beneficiaire bf) ;
 
     public Set<Beneficiaire> getBeneficairesByType (TypeContrat typeContrat);
+
+    Set<Beneficiaire> getBeneficiairesByType(TypeContrat typeContrat);
+
 }
